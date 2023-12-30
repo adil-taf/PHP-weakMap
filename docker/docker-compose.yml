@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: adil-WeakMap-app
+    restart: always
+    working_dir: /var/www/html
+    ports:
+      - 8003:80
+    volumes:
+      - ../:/var/www/html
